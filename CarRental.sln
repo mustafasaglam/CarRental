@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental.Core", "CarRental.Core\CarRental.Core.csproj", "{CA7202A5-9BAA-4889-A423-418AD53A675F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental.Entities", "CarRental.Entities\CarRental.Entities.csproj", "{5DC44C47-A1A8-4443-B7A0-0C4071C6E927}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental.DataAccess", "CarRental.DataAccess\CarRental.DataAccess.csproj", "{9415524D-0A3A-4842-ABC6-9AAF963D64A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental.UI", "CarRental.UI\CarRental.UI.csproj", "{185CC0E7-56EE-4B43-9078-6F8016628082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRental.Business", "CarRental.Business\CarRental.Business.csproj", "{D81F6C3F-8A20-473A-B6BA-9819F0A9D4CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.UI1", "CarRental.UI1\CarRental.UI1.csproj", "{1393E45B-E3C4-45E7-881B-5899AA96105F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.MVCUI", "CarRental.MVCUI\CarRental.MVCUI.csproj", "{BF0DEB17-3DD6-4E6F-BA50-680525B05E5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA7202A5-9BAA-4889-A423-418AD53A675F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7202A5-9BAA-4889-A423-418AD53A675F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7202A5-9BAA-4889-A423-418AD53A675F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7202A5-9BAA-4889-A423-418AD53A675F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC44C47-A1A8-4443-B7A0-0C4071C6E927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC44C47-A1A8-4443-B7A0-0C4071C6E927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC44C47-A1A8-4443-B7A0-0C4071C6E927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC44C47-A1A8-4443-B7A0-0C4071C6E927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9415524D-0A3A-4842-ABC6-9AAF963D64A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9415524D-0A3A-4842-ABC6-9AAF963D64A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9415524D-0A3A-4842-ABC6-9AAF963D64A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9415524D-0A3A-4842-ABC6-9AAF963D64A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185CC0E7-56EE-4B43-9078-6F8016628082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185CC0E7-56EE-4B43-9078-6F8016628082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185CC0E7-56EE-4B43-9078-6F8016628082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185CC0E7-56EE-4B43-9078-6F8016628082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81F6C3F-8A20-473A-B6BA-9819F0A9D4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81F6C3F-8A20-473A-B6BA-9819F0A9D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81F6C3F-8A20-473A-B6BA-9819F0A9D4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81F6C3F-8A20-473A-B6BA-9819F0A9D4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1393E45B-E3C4-45E7-881B-5899AA96105F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1393E45B-E3C4-45E7-881B-5899AA96105F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1393E45B-E3C4-45E7-881B-5899AA96105F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1393E45B-E3C4-45E7-881B-5899AA96105F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0DEB17-3DD6-4E6F-BA50-680525B05E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0DEB17-3DD6-4E6F-BA50-680525B05E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0DEB17-3DD6-4E6F-BA50-680525B05E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0DEB17-3DD6-4E6F-BA50-680525B05E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A79FCA2D-C973-474A-9CA6-DBB07954F3DE}
+	EndGlobalSection
+EndGlobal
