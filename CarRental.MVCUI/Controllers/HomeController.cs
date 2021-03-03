@@ -13,10 +13,11 @@ namespace CarRental.MVCUI.Controllers
     public class HomeController : Controller
     {
         CarManager carManager = new CarManager(new EfCarDal());
+        CarRentalContext db = new CarRentalContext();
         // GET: Home
         public ActionResult Index()
         {
-            var car = carManager.GetAll();
+            var car = db.Cars;
            
             return View(car);
             
