@@ -1,4 +1,6 @@
 ﻿using CarRental.Business.Abstract;
+using CarRental.Business.Constants;
+using CarRental.Core.Utilities.Results;
 using CarRental.DataAccess.Abstract;
 using CarRental.Entities.Concrete;
 using CarRental.Entities.DTOs;
@@ -16,41 +18,46 @@ namespace CarRental.Business.Concrete
             _carDal = carDal;
         }
 
-        public void Add(Car car)
+        public IResult Add(Car car)
         {
-            if (car.Name.Length>=2&&car.DailyPrice>0)
+            if (car.Name.Length<2)
             {
-                _carDal.Add(car);
+                return new ErrorResult(Messages.NotAdded);
             }
-            else
-            {
-                Console.WriteLine("Araba ismi en az 2 kaarkter ve günlük fiyatı 0Dan büyük omalıdır.");
-            }
+            _carDal.Add(car);
+            return new SuccessResult(Messages.Added);
         }
 
-        public void Delete(Car car)
+        public IResult Delete(Car car)
         {
             _carDal.Delete(car);
+            return new SuccessResult(Messages.Deleted);
         }
 
-        public List<Car> GetAll()
+        public IDataResult<List<Car>> GetAll()
         {
-            return _carDal.GetAll();
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.Listed);
         }
 
-        public Car GetById(int id)
+        public IDataResult<Car> GetById(int id)
         {
-            return _carDal.Get(c => c.Id == id);
+            return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == id));
         }
 
-        public List<CarDetailDto> GetCarDetails()
+        public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return _carDal.GetCarDetails();
+            if (DateTime.Now.Hour==16)
+            {
+                return new ErrorDataResult<List<CarDetailDto>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
         }
 
-        public void Update(Car car)
+        public IResult Update(Car car)
         {
+
             _carDal.Update(car);
+            return new SuccessResult(Messages.Updated);
         }
 
 
