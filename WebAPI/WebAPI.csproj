@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CarRental.Business\CarRental.Business.csproj" />
     <ProjectReference Include="..\CarRental.Core\CarRental.Core.csproj" />
     <ProjectReference Include="..\CarRental.DataAccess\CarRental.DataAccess.csproj" />

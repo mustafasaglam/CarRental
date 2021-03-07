@@ -122,10 +122,10 @@ namespace CarRental.UI
         private static void GetByIdTest()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            Console.WriteLine(brandManager.GetById(1).BrandName);
+            Console.WriteLine(brandManager.GetById(1).Data.BrandName);
 
             ColorManager colorManager = new ColorManager(new EfColorDal());
-            Console.WriteLine(colorManager.GetById(1).ColorName);
+            Console.WriteLine(colorManager.GetById(1).Data.ColorName);
 
             CarManager carManager = new CarManager(new EfCarDal());
             Console.WriteLine(carManager.GetById(1).Data.Name);

@@ -1,9 +1,11 @@
 ﻿using CarRental.Business.Abstract;
 using CarRental.Business.Constants;
+using CarRental.Business.ValidationRules.FluentValidation;
 using CarRental.Core.Utilities.Results;
 using CarRental.DataAccess.Abstract;
 using CarRental.Entities.Concrete;
 using CarRental.Entities.DTOs;
+using Core.Aspects.Autofac.Validation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,12 +20,14 @@ namespace CarRental.Business.Concrete
             _carDal = carDal;
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            if (car.Name.Length<2)
-            {
-                return new ErrorResult(Messages.NotAdded);
-            }
+            //Artık bu kısım fluent validasyon ve aspect ile kontrol ediliyor [] attiribute ile
+            //if (car.Name.Length<2)
+            //{
+            //    return new ErrorResult(Messages.NotAdded);
+            //}
             _carDal.Add(car);
             return new SuccessResult(Messages.Added);
         }
