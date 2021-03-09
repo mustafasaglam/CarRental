@@ -12,6 +12,6 @@ namespace CarRental.Business.Constants
         public static string NotAdded = "Kayıt yapılamadı";
         public static string Listed = "Kayıtlar Listelendi";
         public static string MaintenanceTime = "Bakım zamanı / Ürünler getirilmedi :)";
-
+        public static string CapacityFulled = "5 adet resim seçilebilir";
     }
 }

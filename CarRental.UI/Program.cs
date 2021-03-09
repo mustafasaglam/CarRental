@@ -1,8 +1,10 @@
 ﻿using CarRental.Business.Concrete;
 using CarRental.Business.Constants;
+using CarRental.Core.Utilities.Results;
 using CarRental.DataAccess.Concrete.EntityFramework;
 using CarRental.Entities.Concrete;
 using System;
+using System.Collections.Generic;
 
 namespace CarRental.UI
 {
@@ -10,9 +12,26 @@ namespace CarRental.UI
     {
         static void Main(string[] args)
         {
-            
+            //BrandManager brandManager = new BrandManager(new EfBrandDal());
+            //var result = brandManager.GetAll();
+            //foreach (var item in result.Data)
+            //{
+            //    Console.WriteLine(item.BrandName);
+            //}
 
-            RentalAdded();
+
+            CarImageManager carImageManager = new CarImageManager(new EfCarImageDal());
+            var result = carImageManager.All.Data;
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.CarId);
+            }
+
+
+
+
+
+            //RentalAdded();
 
             //RentListGetAll();
 

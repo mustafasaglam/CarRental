@@ -19,6 +19,9 @@ namespace CarRental.Business.DependencyResolver.Autofac
             builder.RegisterType<CarManager>().As<ICarService>().SingleInstance();
             builder.RegisterType<EfCarDal>().As<ICarDal>().SingleInstance();
 
+            builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();
+            builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
+
 
 
             //Bu kısım sabit. Git bütün interfacelerı al ve aspectInterceptorSelector ile çalıştır demek için
