@@ -1,5 +1,6 @@
 ﻿using CarRental.Business.Abstract;
 using CarRental.Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,6 +23,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getall")]
+        //rol bazlı yapı için burada authorize olmasını şart koşuyoruz ve rollerini yani yapabileceği işlerini sıra ile belirtiyoruz, Product.list yetkisi veritabanındaki OperationClaim ve UserOperationClaim tablolarından gelmektedir**
+        [Authorize(Roles = "Product.List")] //ürün listeleyebilme yapabilsin dedik sadece**
         public IActionResult GetAll()
         {
             var result = _customerService.GetAll();

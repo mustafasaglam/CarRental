@@ -21,7 +21,7 @@ namespace CarRental.UI
 
 
             CarImageManager carImageManager = new CarImageManager(new EfCarImageDal());
-            var result = carImageManager.All.Data;
+            var result = carImageManager.GetAll().Data;
             foreach (var item in result)
             {
                 Console.WriteLine(item.CarId);

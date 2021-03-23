@@ -2,6 +2,7 @@
 using Autofac.Extras.DynamicProxy;
 using CarRental.Business.Abstract;
 using CarRental.Business.Concrete;
+using CarRental.Core.Utilities.Security.JWT;
 using CarRental.DataAccess.Abstract;
 using CarRental.DataAccess.Concrete.EntityFramework;
 using Castle.DynamicProxy;
@@ -21,6 +22,16 @@ namespace CarRental.Business.DependencyResolver.Autofac
 
             builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();
             builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
+
+            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
+            builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
+
+            builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();
+            builder.RegisterType<EfCustomerDal>().As<ICustomerDal>().SingleInstance();
+
+            builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance(); //Bunun bir veri erişimi olmadığı için efAuth dal ksımını yapmadık. Ama user service bağımlılığnı bi yukarda verdik zaten
+            builder.RegisterType<JwtHelper>().As<ITokenHelper>().SingleInstance(); //Token helper için
+
 
 
 

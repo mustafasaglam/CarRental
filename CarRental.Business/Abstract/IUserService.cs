@@ -1,4 +1,5 @@
-﻿using CarRental.Core.Utilities.Results;
+﻿using CarRental.Core.Entities.Concrete;
+using CarRental.Core.Utilities.Results;
 using CarRental.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace CarRental.Business.Abstract
         IResult Update(User user);
         IDataResult<List<User>> GetAll();
         IDataResult<User> GetById(int id);
-        
+        List<OperationClaim> GetClaims(User user);
+        User GetByMail(string email);
+
     }
 }
